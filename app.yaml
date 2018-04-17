@@ -1,0 +1,29 @@
+application: g-barrios
+
+#Specify version on appcfg to deploy to production server use:
+#   appcfg.py update [PATH] --version=1
+#To deploy to the staging server don't add --version tag.
+#This is set this way so that you can't upload to the production server by
+#accident, I the flag is forgotten then it uploads to staging server.
+version: staging #Don't change instead specify version on appcfg.py
+
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /static
+  static_dir: static
+
+- url: .*
+  script: main.app
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+- name: jinja2
+  version: latest

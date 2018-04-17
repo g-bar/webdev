@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>/ascii/</title>
+    </head>
+    <style type="text/css">
+        body {
+            font-family: sans-serif;
+            width: 800px;
+            margin: 0 auto;           
+        }
+        
+        .error {
+            color: red;
+            
+        }
+        
+        label{
+            display: block;
+            font-size: 20px;
+        }
+        
+        textarea {
+            width: 400px;
+            height: 200px;
+            font-size: 17px;
+            font-family: monospace;
+        }
+        input[type=submit]{
+            font-size:24px;
+        }
+        
+        hr {
+            margin: 20px auto;
+        }
+        
+        .art + .art{
+            margin-top: 20px;
+        }
+        
+        .art-title {
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .art-body {
+            margin: 0;
+            font-size: 17px;
+        }
+        
+        img{
+            
+            max-width: 100%;
+            height: auto;
+            padding: 10px;
+            
+        }
+        
+        footer{
+            margin-top: 10px;
+            font-size: 12px;
+            color: #999;
+            float:right;    
+        }
+        
+        
+    </style>
+    
+    <body>
+        <h1>/ascii/</h1>
+        <table>
+            <tr>
+                <td>
+                    <form method="post">    
+                        <label for="title">title</label>
+                        <input type="text" name="title" id="title", value="{{title}}">
+                        
+                        <label for="textarea">Art</label>    
+                        <textarea id="textarea" name="art">{{art}}</textarea>
+                        <div class="error">{{error}}</div>
+                        <input type="submit" value="Submit"></div>
+                    
+                    </form>
+                    
+                </td>
+                <td>
+                    <img src="{{imgsrc | safe}}">
+                </td>
+            </tr>
+        </table>
+        <hr>
+        <div class="content">
+        <h1>Art</h1>
+            {% for art in arts %}            
+            <div class="art">
+                <div class="art-title">{{art.title}}</div>
+                <pre class="art-body">{{art.art}}</pre>                
+            </div>
+            {%endfor%}                  
+        </div>          
+    </body>
+    <footer>
+    {% if time%}
+        queried {{time}} seconds ago.
+    {%endif%}
+    </footer>
+    
+</html>
+

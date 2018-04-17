@@ -1,0 +1,50 @@
+{%extends "blog/formbase.html"%}
+{%block body%}
+<form class="form-container" method="post">
+    <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input" type="text" name="username" id="username" value="{{username}}">
+        <label class="mdl-textfield__label" for="username">Username: </label>
+
+    </div>
+    {%if nameerr%}
+    <br>
+    <span class="mdl-color-text--accent">{{nameerr}}</span>
+    {%endif %}
+    <br>
+
+    <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input" type="password" name="password" id="password">
+        <label class="mdl-textfield__label" for="password">Password: </label>
+    </div>
+    {%if passerr%}
+    <br>
+    <span class="mdl-color-text--accent">{{passerr}}</span>
+    {%endif %}
+    <br>
+
+    <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input" type="password" name="verify" id="verify">
+        <label class="mdl-textfield__label" for="verify">Enter again: </label>
+    </div>
+    {%if verifyerr%}
+    <br>
+    <span class="mdl-color-text--accent">{{verifyerr}}</span>
+    {%endif%}
+    <br>
+
+    <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input" type="text" name="email" id="email" value="{{email}}">
+        <label class="mdl-textfield__label" for="email">Email: </label>
+    </div>
+    {%if emailerr%}
+    <br>
+    <span class="mdl-color-text--accent">{{emailerr}}</span>
+    {%endif%}
+    <br>
+
+    <div class="button">
+      <input type="Submit" value="Submit" class="mdl-button mdl-js-button                                                  mdl-button--raised                                                        mdl-button--colored">
+    </div>
+
+</form>
+{%endblock%}

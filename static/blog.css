@@ -1,0 +1,162 @@
+
+body{
+    font-family: "Trirong", Georgia, serif;
+}
+
+h1,h2,h3{
+    font-family: "Lalezar","Arial", sans-serif;
+}
+
+
+.mdl-layout-title a:link,
+.mdl-layout-title a:visited{
+    text-decoration: none;
+    color: inherit;
+}
+
+.mdl-layout-title a:hover,
+.mdl-layout-title a:link{
+    text-decoration: none;
+    color: #607d8b;
+}
+
+
+
+h1 a:link,
+h1 a:visited,
+h1 a:hover,
+h1 a:active{
+    text-decoration: none;
+    color: inherit;
+}
+
+h2 a:link,
+h2 a:visited{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+h2 a:hover,
+h2 a:active{
+    text-decoration: none;
+    color: #607d8b;
+}
+
+.post-title{
+    font-size: 24px;
+    line-height: 1.1;
+    margin: auto;
+}
+
+.post{
+    padding: 20px;
+}
+
+.post + .post{
+    padding-top: 40px;
+    border-top: 2px solid #90a4ae;
+}
+
+.post-date{
+    font-size: 0.9em;
+    float: right;
+    color: #666;
+}
+
+.post-content{
+    font-size: 16px;
+    line-height: normal;
+    padding: 0 20px 20px;
+}
+
+.post hr{
+    clear: both;
+}
+
+
+/*Header*/
+.mdl-layout__header{
+    border-bottom: 2px solid #90a4ae;
+
+}
+
+.mdl-layout__header-row{
+    padding: 0 40px;
+}
+
+.whitebg{
+    background: white;
+    color: inherit;
+}
+
+.mdl-layout__header-row .mdl-navigation__link{
+    text-decoration: none;
+    background-color:rgba(96, 125, 139,1);
+    color: white;
+    text-transform: uppercase;
+    border: 1.5px solid white;
+    border-width: 0 1.5px;
+}
+
+.mdl-layout__header-row .mdl-navigation__link:not(:first-child){
+    border-left: none;
+}
+
+.mdl-layout-title{
+    font-family: "Lalezar", "Helvetica","Arial",sans-serif;
+    font-size: 30px;
+}
+
+.mdl-button{
+    font-family: "Abhaya Libre", "Georgia", serif;
+}
+.mdl-navigation .mdl-button{
+    margin-left: 10px;
+}
+
+.hi-user{
+    padding: 24px;
+}
+
+.inner{
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+/*Footer*/
+footer{
+    border-top: 2px solid #90a4ae;
+    text-align: right;
+    padding: 8px;
+    color: #666;
+}
+
+/*Forms*/
+
+.mdl-typography--headline{
+    font-family: "Lalezar","Arial", sans-serif;
+    color: inherit;
+}
+
+.center-cell{
+    text-align: center;
+}
+
+.form-container{
+    display: inline-block;
+    text-align: left;
+    padding:0 20px 20px;
+}
+
+.input-error{
+    margin-bottom: 10px;
+}
+
+.button{
+    text-align:center;
+}
+
+.post-input{
+    width: 100%;
+}

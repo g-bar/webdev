@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+{%block content%}
+    <article>
+      <header class="page-header">
+        <div class="menu">
+          <a href="/wiki/_edit/{{url}}" >Edit</a>
+          <a href="/wiki/_history/{{url}}" >History</a>
+        </div>
+
+        <h2> {{url}}</h2>
+      </header>
+      <p class="article">
+      {{wikipage.content.replace('\n','<br>') | safe}}
+      </p>
+    </article>
+{%endblock%}

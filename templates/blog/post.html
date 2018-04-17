@@ -1,0 +1,16 @@
+<div class="post">
+  <div class="post-heading">
+    <h2 class="post-title">
+      <a href="/blog/{{post.key().id()}}" class="post-title">{{post.subject}}</a>
+    </h2>
+
+    <div class="post-date">Posted on: {{post.created.strftime('%d %b, %Y')}}</div>
+  </div>
+  <hr>
+  <div class="post-content">
+    {{post.content.replace('\n','<br>') | safe}}
+  </div>
+</div>
+
+
+

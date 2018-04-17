@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include "blog/material.html"%}
+    <title>{{pagetitle}}</title>
+  </head>
+
+  <body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <div class="mdl-layout__header whitebg">
+        <div class="mdl-layout__header-row">
+          <div class="mdl-layout-spacer"></div>
+          <span class="mdl-layout-title"><a href="/blog">Blog</a></span>
+          <div class="mdl-layout-spacer"></div>
+        </div> <!--header-row-->
+      </div> <!--header-->
+
+      <main class="mdl-layout__content">
+        <div class="mdl-grid">
+          <!--Headline-->
+          <div class="mdl-cell--12-col center-cell">
+            <h2 class="mdl-typography--headline">{{pagetitle}}</h2>
+          </div> <!--cell-->
+
+          <!--Form-->
+          <div class="mdl-cell--12-col center-cell">
+            <!--<div class="form-container">-->
+              {%block body%}
+              {%endblock%}
+            <!--</div>form-container-->
+          </div> <!--form-->
+        </div> <!--grid-->
+      </main>
+    </div> <!--mdl-layout-->
+
+  </body>
+</html>

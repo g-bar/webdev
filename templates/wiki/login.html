@@ -1,0 +1,26 @@
+{%extends "formbase.html"%}
+{%block body%}
+
+<form method = "post">
+    <div class="field">
+        <label for="username">Username: </label>
+        <input type="text" name="username" id="username" value="{{username}}">
+
+    </div>
+    <div class="field">
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password">
+        <input type="hidden" name="referer" value="{{referer}}">
+        <small class="error">
+        {{loginerr}}
+        </small>
+    </div>
+
+    <input type="Submit" value="Login">
+
+
+</form>
+<div class="signup-link">
+    or <a href="/wiki/signup?referer={{referer}}"> Signup</a>
+</div>
+{%endblock%}

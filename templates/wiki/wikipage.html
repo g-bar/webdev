@@ -1,0 +1,14 @@
+<div class="post">
+    <div class="post-heading">        
+        <div class="post-title">{{wikipage.subject}}
+        </div>
+        
+        <div class="post-date">Last modified: {{wikipage.last_modified.strftime('%d %b, %Y')}}</div>
+    </div>
+    <div class="post-content">
+        {{post.content.replace('\n','<br>') | safe}}
+    </div>
+</div>
+
+
+

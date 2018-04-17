@@ -1,0 +1,17 @@
+{%extends "blog/base.html"%}
+
+{%block title%}
+  <title>
+    {{pagetitle}}
+  </title>
+{%endblock title%}
+
+{%block content%}
+    {%for post in posts%}
+        {{post | safe }}
+    {%endfor%}
+{%endblock%}
+
+{%block footer%}
+{%include "blog/footer.html"%}
+{%endblock%}

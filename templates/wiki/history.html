@@ -1,0 +1,19 @@
+{%extends "base.html"%}
+{%block content%}
+<h2>{{url}}</h2>
+
+<table>
+{%for page in pages%}
+    <tr>
+        <td >{{page.created.strftime('%c')}}</td>
+        <td>{{page.content[:500] }} ... </td>
+        <td>{{"v%s"%page.version}}</td>
+
+        <td><a href="/wiki/{{url}}?v={{page.version}}">View</a></d>
+        <td><a href="/wiki/_edit/{{url}}?v={{page.version}}">Edit</a></d>
+    </tr>
+
+{%endfor%}
+</table>
+
+{%endblock%}

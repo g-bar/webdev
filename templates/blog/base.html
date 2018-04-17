@@ -1,0 +1,60 @@
+{% macro navbar(for_screen='') %}
+  {%if user%}
+          <!--Navigation only on large screen-->
+          <nav class="mdl-navigation {{for_screen}}">
+            <span class="hi-user">
+              Hi! {{user}}
+            </span>
+            <a class="mdl-navigation__link" href="/blog/logout">Logout</a>
+          </nav>
+        {%else%}
+          <nav class="mdl-navigation {{for_screen}}">
+
+            <a class="mdl-navigation__link" href="/blog/signup">Signup</a>
+            <a class="mdl-navigation__link active-link" href="/blog/login">Login</a>
+          </nav>
+        {%endif%}
+{% endmacro %}
+
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    {% include "blog/material.html"%}
+    {% block title%}{%endblock title%}
+  </head>
+
+  <body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header whitebg">
+        <div class="mdl-layout__header-row">
+          <!--Spacer to center title on small screens (on large screens it floats right)-->
+          <div class="mdl-layout-spacer mdl-layout--small-screen-only"></div>
+          <!-- Title -->
+          <span class="mdl-layout-title"><a href="/blog">Blog</a></span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          {{navbar("mdl-layout--large-screen-only")}}
+
+        </div> <!--row-->
+        <div class="mdl-layout__header-row mdl-layout--small-screen-only
+                    mdl-color--primary">
+          <div class="mdl-layout-spacer"></div>
+          {{navbar()}}
+          <div class="mdl-layout-spacer"></div>
+        </div>
+      </header>
+      <div class="mdl-layout__content">
+        <main class="mdl-grid inner">
+          <div class="mdl-cell mdl-cell--12-col">
+            {% block content%}
+            {%endblock%}
+          </div> <!--cell-->
+        </main>  <!--grid-->
+        {%block footer %}
+        {%endblock %}
+      </div> <!--content-->
+    </div> <!--mdl-layout-->
+
+
+  </body>
+</html>

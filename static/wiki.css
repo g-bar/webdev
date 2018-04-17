@@ -1,0 +1,193 @@
+/*General styles*/
+::selection {
+  background: rgba(0,150,136,0.2);
+}
+::-moz-selection {
+  background: rgba(0,150,136,0.2);
+}
+html {
+  font-size: 100%;
+}
+html * {
+  box-sizing: border-box;
+}
+body {
+  font: 1rem Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+/*Header*/
+.header {
+  padding: 0.5rem 3rem;
+  border-bottom: 2px solid #009688;
+  box-shadow: 1px 1px 3px rgba(0,150,136,0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #fff;
+  width: 100%;
+}
+.header a {
+  text-decoration: none;
+}
+.header > h1 {
+  margin: 0;
+  float: left;
+  font-size: 2rem;
+  line-height: 1;
+  letter-spacing: 0.2rem;
+}
+.header > h1 > a {
+  color: inherit;
+}
+.header > nav {
+  display: block;
+  float: right;
+  height: 2rem;
+}
+.header > nav * {
+  display: block;
+  height: 100%;
+}
+.header > nav > ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: table;
+}
+.header > nav li {
+  display: table-cell;
+  font-size: 1rem;
+}
+.header > nav li > a {
+  padding: 0.5rem 1rem;
+}
+.header:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.main {
+  padding: 1rem;
+  position: relative;
+  top: 2rem;
+  max-width: 60rem;
+  margin: 1rem auto;
+}
+article {
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+article p {
+  font-family: Cambria, Cochin, Georgia, Garamond, Times, Times New Roman, serif;
+  line-height: 1.5;
+  margin-top: 0;
+  padding: 1em 0.5em;
+  background: linear-gradient(to bottom left, rgba(0,150,136,0.05), transparent 50%);
+}
+@media all and (min-width: 40rem) {
+  article p {
+    -moz-column-width: 2;
+    -moz-columns: 2;
+    -webkit-columns: 2;
+    columns: 2;
+  }
+}
+a {
+  color: #f44336;
+}
+a:focus {
+  outline-color: #009688;
+}
+.page-header {
+  height: 1.5rem;
+}
+.page-header * {
+  height: 100%;
+}
+.page-header > h2 {
+  line-height: 1;
+  color: #009688;
+  margin: 0;
+}
+.page-header > .menu {
+  display: flex;
+  float: right;
+  align-items: flex-end;
+}
+.page-header > .menu:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.page-header > .menu a {
+  font-size: smaller;
+  padding: 0.5rem;
+  padding-bottom: 0;
+  color: inherit;
+  border: 1px solid rgba(0,150,136,0.5);
+  margin: 0 1px;
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
+  background: rgba(0,150,136,0.05);
+  text-decoration: none;
+}
+.page-header > .menu a:last-child {
+  margin-right: 0;
+}
+.page-header > .menu a:hover {
+  color: #f44336;
+}
+/*Forms*/
+.form {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem auto;
+}
+.form > h2 {
+  color: #009688;
+  margin: 0;
+}
+.form .field {
+  line-height: 2em;
+  margin: 1.5rem 0;
+}
+.form .field > * {
+  display: block;
+}
+.form .error {
+  color: #f44336;
+}
+.form input[type="submit"] {
+  margin: 1.5rem auto;
+}
+input[type="submit"] {
+  background-color: #009688;
+  padding: 0.7rem 1rem;
+  color: #fff;
+  text-transform: uppercase;
+  border-color: #009688;
+  cursor: pointer;
+  display: block;
+  margin: 1rem auto;
+}
+textarea {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  height: 70vh;
+  font: 0.9em Cambria, Cochin, Georgia, Garamond, Times, Times New Roman, serif;
+  outline-color: #009688;
+}
+table {
+  border-collapse: collapse;
+  font-size: 0.85em;
+}
+tr:nth-child(2n) {
+  background: rgba(0,150,136,0.1);
+}
+td {
+  padding: 0.5rem;
+}

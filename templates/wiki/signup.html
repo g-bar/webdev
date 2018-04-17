@@ -1,0 +1,35 @@
+{%extends "formbase.html"%}
+{%block body%}
+
+        <form method="post">
+            <div class="field">
+                <label for="username">Username: </label>
+                <input type="text" name="username" id="username" value="{{username}}">
+                <span class="error">{{nameerr}}</span>
+            </div>
+
+            <div class="field">
+                <label for="password">Password: </label>
+                <input type="password" name="password" id="password">
+                <span class="error">{{passerr}}</span>
+            </div>
+
+            <div class="field">
+                <label for="verify">Reenter password: </label>
+                <input type="password" name="verify" id="verify">
+                <span class="error">{{verifyerr}}</span>
+            </div>
+
+            <div class="field">
+                <label for= "email">Email(optional)</label>
+                <input type="text" name="email" id="email" value="{{email}}">
+                <span class="error">{{emailerr}}</span>
+            </div>
+
+            <input type="hidden" name="referer" value="{{referer}}">
+            <div class="field">
+            <input type="submit" value="Submit">
+            </div>
+
+        </form>
+{%endblock%}
